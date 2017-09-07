@@ -18,7 +18,7 @@
       newItem.children = item [map.children];
       result.push(newItem);
       if( item[ map.children ]){
-        newItem.children = nx.treeMap( item[ map.children ] );
+        newItem.children = nx.treeMap( item[ map.children ] , map);
       }
     });
 
