@@ -3,6 +3,8 @@
 
 ## usage:
 ```js
+require('next-tree-map');
+
 nx.treeMap(items, {
   label:'xx',
   value:'id',
