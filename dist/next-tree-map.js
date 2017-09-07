@@ -13,12 +13,12 @@
 
     nx.map( inItems, function(index, item) {
       var newItem = {};
+      var children = item[ map.children ];
       newItem.label = item [map.label];
       newItem.value = item [map.value];
-      newItem.children = item [map.children];
       result.push(newItem);
-      if( item[ map.children ]){
-        newItem.children = nx.treeMap( item[ map.children ] , map);
+      if( children && children.length>0 ){
+        newItem.children = nx.treeMap( children , map);
       }
     });
 
