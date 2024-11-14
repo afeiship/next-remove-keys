@@ -1,6 +1,6 @@
 {
   "name": "@jswork/next-remove-keys",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Remove keys from array/object.",
   "homepage": "https://js.work",
   "files": [
@@ -56,5 +56,11 @@
   },
   "dependencies": {
     "@jswork/next-deep-each": "^1.0.4"
-  }
+  },
+  "keywords": [
+    "each",
+    "keys",
+    "object",
+    "remove"
+  ]
 }
