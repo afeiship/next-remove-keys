@@ -49,4 +49,34 @@ describe('nx.removeKeys', () => {
       }
     });
   });
+
+  test('03/array of objects', function () {
+    var arr1 = [
+      {
+        college: 'Carnegie Mellon University',
+        can_exchange_credit: false,
+        is_editing: false
+      },
+      {
+        college: 'Stanford University',
+        can_exchange_credit: true,
+        is_editing: true
+      }
+    ];
+
+    nx.removeKeys(arr1, {
+      keys: ['is_editing']
+    });
+
+    expect(arr1).toEqual([
+      {
+        college: 'Carnegie Mellon University',
+        can_exchange_credit: false
+      },
+      {
+        college: 'Stanford University',
+        can_exchange_credit: true
+      }
+    ]);
+  });
 });

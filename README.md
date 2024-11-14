@@ -15,7 +15,23 @@ yarn add @jswork/next-remove-keys
 ```js
 import '@jswork/next-remove-keys';
 
-//DOCS here!
+const obj = {
+  name: "John Doe",
+  address: {
+    street: "123 Main St",
+    city: "Anytown",
+    state: "CA",
+    zip: "12345",
+  },
+  phone: {
+    home: "555-555-1234",
+    work: "555-555-5678",
+  },
+};
+
+nx.removeKeys(obj, {
+  keys: ["address.zip", "work"],
+});
 ```
 
 ## license
