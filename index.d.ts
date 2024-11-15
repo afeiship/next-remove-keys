@@ -3,5 +3,5 @@ interface NxRemoveKeysOptions {
 }
 
 interface NxStatic {
-  removeKeys: (target: any, options?: NxRemoveKeysOptions) => void;
+  removeKeys: (target: any, options?: NxRemoveKeysOptions) => any;
 }

@@ -2,8 +2,11 @@ import nx from '@jswork/next';
 import '@jswork/next-deep-each';
 
 const defaults = { keys: [] };
+const isObject = (inTarget) => typeof inTarget === 'object' && inTarget!== null;
 
 nx.removeKeys = function (inTarget, inOptions) {
+  if (!isObject(inTarget)) return inTarget;
+
   var options = nx.mix(null, defaults, inOptions);
   var itHasDot = (key) => key.includes('.') === true;
   var normalKeys = options.keys.filter((key) => !itHasDot(key));
@@ -18,6 +21,8 @@ nx.removeKeys = function (inTarget, inOptions) {
   dotKeys.forEach(function (key) {
     nx.del(inTarget, key);
   });
+  
+  return inTarget;
 };
 
 if (typeof module !== 'undefined' && module.exports && typeof wx === 'undefined') {

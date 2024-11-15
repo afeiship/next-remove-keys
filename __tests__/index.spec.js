@@ -79,4 +79,29 @@ describe('nx.removeKeys', () => {
       }
     ]);
   });
+
+  test('04/none object should not be modified', function () {
+    const arr2 = [1, 2, 3];
+    const v1 = 1;
+    const v2 = 'hello';
+    const v3 = true;
+    const v4 = null;
+    const v5 = undefined;
+    nx.removeKeys(arr2, { keys: ['is_editing'] });
+    expect(arr2).toEqual([1, 2, 3]);
+
+    nx.removeKeys(v1, { keys: ['is_editing'] });
+    expect(v1).toEqual(1);
+    nx.removeKeys(v2, { keys: ['is_editing'] });
+    expect(v2).toEqual('hello');
+
+    nx.removeKeys(v3, { keys: ['is_editing'] });
+    expect(v3).toEqual(true);
+
+    nx.removeKeys(v4, { keys: ['is_editing'] });
+    expect(v4).toEqual(null);
+
+    nx.removeKeys(v5, { keys: ['is_editing'] });
+    expect(v5).toEqual(undefined);
+  })
 });
