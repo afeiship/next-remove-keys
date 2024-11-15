@@ -1,6 +1,6 @@
 {
   "name": "@jswork/next-remove-keys",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Remove keys from array/object.",
   "homepage": "https://js.work",
   "files": [
